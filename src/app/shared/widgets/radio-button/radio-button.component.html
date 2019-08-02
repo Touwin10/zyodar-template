@@ -1,0 +1,31 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Radio Button</div>
+  </ons-toolbar>
+  <div class="background"></div>
+  <div class="content">
+    <div style="padding: 10px">
+      <div *ngFor="let fruit of fruits; let i = index">
+        <ons-radio [attr.input-id]="'radio-' + i" [attr.value]="fruit" [(ngModel)]="selectedFruit">
+        </ons-radio>
+        <label [attr.for]="'radio-' + i">
+          {{ fruit }}
+        </label>
+      </div>
+
+      <p id="selected-fruit">
+        {{ selectedFruit }}
+      </p>
+
+      <div [formGroup]="exampleForm">
+        <div *ngFor="let v of vegetables; let i = index">
+          <ons-radio name="vegetable" [attr.input-id]="'vegetable-' + i" formControlName="vegetable" [attr.value]="v">
+          </ons-radio>
+          <label [attr.for]="'vegetable-' + i">{{ v }}</label>
+        </div>
+      </div>
+
+      <p id="selected-vegetable">{{ exampleForm.get('vegetable').value }}</p>
+    </div>
+  </div>
+</ons-page>

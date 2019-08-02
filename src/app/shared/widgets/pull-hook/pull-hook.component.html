@@ -1,0 +1,16 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Pull Hook</div>
+  </ons-toolbar>
+
+  <div class="content">
+    <ons-pull-hook height="64px" threshold-height="128px" (changestate)="onChangeState($event)"
+      (action)="onAction($event)">
+      {{message}}
+    </ons-pull-hook>
+
+    <ons-list>
+      <ons-list-item *ngFor="let item of items; let i = index">Item {{i}}</ons-list-item>
+    </ons-list>
+  </div>
+</ons-page>

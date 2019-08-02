@@ -1,0 +1,31 @@
+<div class="container">
+  <div id="lineCont">
+    <div id="line">
+
+      <div class="circle active" id="circle0" style="left: 0%;" (click)="toggle([0, 1, 6, 7, 8, 9, 10])">
+        <div class="popupSpan">June 12, 2015</div>
+      </div>
+      <div class="circle active" id="circle1" style="left: 33.1578947368421%;" (click)="toggle([0, 1, 2, 3, 4, 10])">
+        <div class="popupSpan">August 15, 2015</div>
+      </div>
+      <div class="circle active" id="circle2" style="left: 68.42105263157895%;" (click)="toggle([0, 1, 2, 3, 4, 6, 7])">
+        <div class="popupSpan">October 22, 2015</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="mainCont">
+
+    <div [@listAnimation]="items.length" (@listAnimation.start)="logAnimation($event)"
+      (@listAnimation.done)="logAnimation($event)">
+
+      <div class="transac" *ngFor="let item of items">
+        <div>{{ item }}</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

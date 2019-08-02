@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="header">
+    <div class="profile" fxLayout="row" fxLayoutAlign="space-between center">
+      <img class="mat-elevation-z5"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4ntsMEx5iEeI8rjvDHTw_PwxRxKKXKVRrbDFqXjvASN_1iwuPg"
+        alt="">
+    </div>
+
+    <div class="balance">
+      <div class="blc-title">Apartments Savings</div>
+      <div class="blc-number">$700.55</div>
+    </div>
+
+  </div>
+
+  <div class="title border-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="tl">Saving 5% of daily pay</span>
+    <span>
+      <button mat-button>
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </span>
+  </div>
+
+  <div class="title" fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="tl">Activity</span>
+    <span>
+      <button mat-button>
+        <small>View All</small>
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </span>
+  </div>
+
+  <div class="activity">
+    <div class="title" fxLayout="row" fxLayoutAlign="space-between center">
+      <span class="tl">Last Month Expense</span>
+      <span>-$540.52</span>
+    </div>
+
+    <div class="list-activity mat-elevation-z2">
+      <div class="row" *ngFor="let item of [0, 1, 2, 3]">
+        <div class="circle mat-elevation-z2"> 52 </div>
+        <span class="description">5% of $2500</span>
+        <span class="amount">+225.00</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>

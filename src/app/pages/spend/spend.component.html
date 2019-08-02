@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="header">
+    <div class="profile" fxLayout="row" fxLayoutAlign="space-between center">
+      <img class="mat-elevation-z5"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4ntsMEx5iEeI8rjvDHTw_PwxRxKKXKVRrbDFqXjvASN_1iwuPg"
+        alt="">
+      <button mat-raised-button>
+        Payday In a week
+      </button>
+    </div>
+
+    <div class="balance">
+      <div class="blc-title">Total balance to spend</div>
+      <div class="blc-number">$5785.55</div>
+    </div>
+
+  </div>
+
+  <div class="title" fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="tl">Planning Adead</span>
+    <span>-$540.52</span>
+  </div>
+
+  <drag-scroll class="scrollH-content">
+    <div drag-scroll-item *ngFor="let item of [0, 1, 2, 3]">
+      <span class="icon mat-elevation-z5"></span>
+      <span class="amount">-150.52</span>
+      <small class="date">In a 2 days</small>
+    </div>
+  </drag-scroll>
+
+  <div class="expenses">
+    <div class="title" fxLayout="row" fxLayoutAlign="space-between center">
+      <span class="tl">Last Month Expense</span>
+      <span>-$540.52</span>
+    </div>
+
+    <div class="list-exp mat-elevation-z2">
+      <div class="row" *ngFor="let item of [0, 1, 2, 3]">
+        <div class="circle mat-elevation-z2"> 52 </div>
+        <span class="description">Craftwork</span>
+        <span class="amount">-150.52</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

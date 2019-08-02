@@ -1,0 +1,10 @@
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="items">
+  <div *nguCarouselDef="let item;" class="item">
+    <div class="tile">
+      <ng-container *ngTemplateOutlet="item"></ng-container>
+    </div>
+  </div>
+
+  <ng-content> </ng-content>
+
+</ngu-carousel>

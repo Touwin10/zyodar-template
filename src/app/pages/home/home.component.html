@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="header">
+    <div class="profile" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="name">
+        <small>7th January, 2019</small>
+        Hello, Patrick
+      </div>
+      <img class="mat-elevation-z5"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4ntsMEx5iEeI8rjvDHTw_PwxRxKKXKVRrbDFqXjvASN_1iwuPg"
+        alt="">
+    </div>
+
+    <drag-scroll class="card-account">
+      <div drag-scroll-item>
+        <credit-card></credit-card>
+      </div>
+      <div drag-scroll-item>
+        <credit-card [backgroundColor]="'#EF2D29'"></credit-card>
+      </div>
+      <div drag-scroll-item>
+        <credit-card [backgroundColor]="'#555'"></credit-card>
+      </div>
+    </drag-scroll>
+  </div>
+
+  <div class="history mat-elevation-z2" fill-height>
+
+    <div class="date" fxLayout="row" fxLayoutAlign="space-around center">
+      <b>Today</b>
+      <small>$25.00</small>
+    </div>
+
+
+    <div class="history-item" *ngFor="let item of history">
+      <div class="content-img">
+        <img [src]="item?.pic" alt="">
+      </div>
+
+      <div class="desc">
+        <div class="title">{{item?.title}}</div>
+        <small class="sub-title">{{item?.time}}</small>
+      </div>
+      <div class="amount">
+        {{item?.amount}}
+      </div>
+    </div>
+  </div>
+
+</div>

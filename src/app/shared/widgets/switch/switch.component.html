@@ -1,0 +1,14 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Switch Example</div>
+  </ons-toolbar>
+  <div class="background"></div>
+  <div class="content">
+    <div style="text-align: center; margin: 10px;">
+      <label><input type="checkbox" [(ngModel)]="target"> {{target ? 'On' : 'Off'}}</label>
+      <br>
+      <br>
+      <ons-switch [value]="target" (change)="target = $event.target.checked"></ons-switch>
+    </div>
+  </div>
+</ons-page>

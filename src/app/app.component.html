@@ -1,20 +1,77 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container" fxLayout="row wrap" fxLayoutAlign="space-around start">
 
+
+  <div class="description">
+    <h1>Zyodar</h1>
+
+    <p>
+      Zyodar is a mobile web template created using:
+    </p>
+    <ul>
+      <li>
+        <a href="https://onsen.io/angular2/"> Osen UI</a>
+      </li>
+      <li>
+        <a href="https://angular.io/"> Angular CLI</a>
+      </li>
+      <li>
+        <a href="https://material.angular.io/">
+          Angular Material Design
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/angular/flex-layout/wiki"> Angular Flex-layout</a>
+      </li>
+    </ul>
+
+    <p>
+      It includes other modules like:
+    </p>
+    <ul>
+      <li>
+        <a href="https://www.zingchart.com/docs">ZingChart</a>
+      </li>
+      <li>
+        <a href="https://www.chartjs.org/samples/latest/">Chartjs</a>
+      </li>
+    </ul>
+
+    <p>
+      With the following, you have a sample of a mobile banking app, in which you can find multiple widgets that you can
+      work with.
+    </p>
+  </div>
+
+  <div>
+
+    <mobile-container>
+      <ons-tabbar>
+        <div class="tabbar__content"></div>
+        <div class="tabbar mat-elevation-z10">
+          <ons-tab icon="home" [page]="home" active> </ons-tab>
+          <ons-tab icon="wallet" [page]="spend"> </ons-tab>
+          <ons-tab icon="heart" [page]="save"></ons-tab>
+          <ons-tab icon="cog" [page]="settings"></ons-tab>
+        </div>
+      </ons-tabbar>
+    </mobile-container>
+
+
+    <!-- Without Mobile border -->
+    <!-- <div class="wrapper">
+      <ons-tabbar>
+        <div class="tabbar__content"></div>
+        <div class="tabbar mat-elevation-z10">
+          <ons-tab icon="home" [page]="home" active> </ons-tab>
+          <ons-tab icon="wallet" [page]="spend"> </ons-tab>
+          <ons-tab icon="heart" [page]="save"></ons-tab>
+          <ons-tab icon="cog" [page]="settings"></ons-tab>
+        </div>
+      </ons-tabbar>
+    </div> -->
+
+
+  </div>
+
+
+</div>

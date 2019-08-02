@@ -1,0 +1,113 @@
+.container {
+  height: 100%;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    min-height: 240px;
+    background-image: linear-gradient(#0F2C4B, #174271);
+    z-index: 100;
+    margin-bottom: 100px;
+
+    .profile {
+      padding: 40px 10px 10px 10px;
+
+      .name {
+        small {
+          display: block;
+          color: cadetblue;
+          font-size: 13px
+        }
+
+        font-size: 25px;
+        line-height: 28px;
+        color: white;
+        font-weight: bold;
+      }
+
+
+    }
+  }
+
+
+  .card-account {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .history {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(white, whitesmoke);
+    border-radius: 50px 50px 0 0;
+    padding-top: 20px;
+    z-index: -100;
+    overflow: auto;
+  }
+
+  .date {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .05);
+    padding-bottom: 10px;
+  }
+
+  .history-item {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #0F2C4B;
+    }
+
+    .desc {
+      flex-grow: 2;
+      align-content: center;
+      padding: 5px;
+
+      .title {
+        font-weight: bolder;
+      }
+
+      .sub-title {
+        color: gray;
+      }
+    }
+
+    .amount {
+      text-align: left;
+      flex-grow: 1;
+      line-height: 50px;
+    }
+  }
+}
+
+:host /deep/ {
+  .drag-scroll-content {
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+}
